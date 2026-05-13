@@ -16,17 +16,3 @@ Blockly.defineBlocksWithJsonArray([{
   "colour": %{BKY_LOOPS_HUE},
   "inputsInline": true
 }]);
-
-Blockly.JavaScript['wait_seconds'] = function(block) {
-  var seconds = Number(block.getFieldValue('restseconds'));
-  var code = 'sleep(' + seconds + ' * 1000);\n';
-  return code;
-};
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-async function demo() {
-    for (let restseconds = 0; restseconds < 5; restseconds++) {
-        await sleep(restseconds * 1000);
-    }
-}

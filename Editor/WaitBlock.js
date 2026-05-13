@@ -1,26 +1,32 @@
 Blockly.defineBlocksWithJsonArray([{
-  "type": "wait_seconds",
-  "message0": " wait %1 seconds",
-  "args0": [{
-    "type": "field_number",
-    "name": "SECONDS",
-    "min": 0,
-    "max": 86400,
-    "value": 1
-  }],
+  "type": "rest",
+  "tooltip": "This is ma vare first bloc i made",
+  "helpUrl": "",
+  "message0": "rest %1 seconds",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "restseconds",
+      "align": "RIGHT",
+      "check": "Number"
+    }
+  ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "%{BKY_LOOPS_HUE}"
+  "colour": %{BKY_LOOPS_HUE},
+  "inputsInline": true
 }]);
 
 Blockly.JavaScript['wait_seconds'] = function(block) {
-  var seconds = Number(block.getFieldValue('SECONDS'));
-  var code = 'waitForSeconds(' + seconds + ');\n';
+  var seconds = Number(block.getFieldValue('restseconds'));
+  var code = 'sleep(' + seconds + ' * 1000);\n';
   return code;
 };
-function waitForSeconds (globalObject) {
-  Blockly.JavaScript.addReservedWords('waitForSeconds');
-    function(timeInSeconds, callback) {
-      setTimeout(callback, timeInSeconds * 1000);
-    };
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function demo() {
+    for (let restseconds = 0; restseconds < 5; restseconds++) {
+        await sleep(restseconds * 1000);
+    }
 }

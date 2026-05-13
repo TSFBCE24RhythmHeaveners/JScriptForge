@@ -18,4 +18,4 @@ Blockly.JavaScript['my_block'] = function(block) {
 //Add blocks
 gvbvdxxScriptMaker.blocks.register([
 "my_block"
-], "My Cool Blocks", "red");
+], "My Cool Blocks", "blue");

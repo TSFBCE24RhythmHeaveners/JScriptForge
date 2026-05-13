@@ -27,4 +27,4 @@ Blockly.JavaScript['pause'] = function(block) {
 //Add blocks
 gvbvdxxScriptMaker.blocks.register([
 "pause"
-], "Pause Block", "gold");
+], "Pause Block", "yellow");

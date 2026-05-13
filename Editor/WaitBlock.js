@@ -18,7 +18,3 @@ Blockly.JavaScript['wait_seconds'] = function(block) {
   var code = 'setTimeout(seconds * 1000);\n';
   return code;
 }
-
-gvbvdxxScriptMaker.blocks.register([
-"wait_seconds"
-], "Wait Block", "green");

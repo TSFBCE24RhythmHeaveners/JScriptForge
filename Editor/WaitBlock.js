@@ -20,9 +20,8 @@ Blockly.JavaScript['wait_seconds'] = function(block) {
 };
 function waitForSeconds(interpreter, globalObject) {
   Blockly.JavaScript.addReservedWords('waitForSeconds');
-  var wrapper = interpreter.createAsyncFunction(
     function(timeInSeconds, callback) {
       setTimeout(callback, timeInSeconds * 1000);
-    });
-  interpreter.setProperty(globalObject, 'waitForSeconds', wrapper);
+    };
+  interpreter.setProperty(globalObject, 'waitForSeconds',);
 }

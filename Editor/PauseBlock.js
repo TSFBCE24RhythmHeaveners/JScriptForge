@@ -18,7 +18,7 @@ const pausescript = {
 };
 Blockly.common.defineBlocksWithJsonArray([pausescript]); {
   const pauseseconds = block.getFieldValue('pauseseconds');
-  const code = `setTimeout(${pauseseconds} * 1000);\n`;
+  const code = `setTimeout(pauseseconds * 1000);\n`;
   return code;
 };
 

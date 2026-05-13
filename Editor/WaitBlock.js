@@ -15,4 +15,4 @@ Blockly.defineBlocksWithJsonArray([{
   "nextStatement": null,
   "colour": %{BKY_LOOPS_HUE},
   "inputsInline": true
-}]);
+}])

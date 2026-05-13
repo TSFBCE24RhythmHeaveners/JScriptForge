@@ -15,8 +15,8 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.costom');  // Deprecated
-goog.provide('Blockly.Constants.costom');
+goog.provide('Blockly.Blocks.custom');  // Deprecated
+goog.provide('Blockly.Constants.custom');
 
 goog.require('Blockly');
 goog.require('Blockly.Blocks');

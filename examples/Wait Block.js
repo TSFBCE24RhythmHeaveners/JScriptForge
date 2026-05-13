@@ -1,5 +1,4 @@
-Blockly.defineBlocksWithJsonArray([
-{
+const pausescript = {
   "type": "pause",
   "tooltip": "Pauses a script",
   "helpUrl": "",
@@ -16,9 +15,8 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": 60,
   "inputsInline": true
-}               
-]);
-Blockly.JavaScript['pause'] = function(block) {
+};
+Blockly.common.defineBlocksWithJsonArray([pausescript]); {
   const pauseseconds = block.getFieldValue('pauseseconds');
   const code = `setTimeout(${pauseseconds} * 1000);\n`;
   return code;

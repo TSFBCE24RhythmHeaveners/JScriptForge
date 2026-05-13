@@ -14,6 +14,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 
 Blockly.JavaScript['wait_seconds'] = function(block) {
-  var code = 'setTimeout(() => {console.log("hahaha");}, SECONDS * 1000);\n';
+  var seconds = Number(block.getFieldValue('SECONDS'));
+  var code = 'setTimeout(() => {console.log("hahaha");}, ' + seconds + ' * 1000);\n';
   return code;
 }

@@ -1,16 +1,3 @@
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
-
-/**
- * @fileoverview Example "wait" block that will pause the interpreter for a
- * number of seconds. Because wait is a blocking behavior, such blocks will
- * only work in interpreted environments.
- *
- * See https://neil.fraser.name/software/JS-Interpreter/docs.html
- */
 Blockly.defineBlocksWithJsonArray([{
   "type": "wait_seconds",
   "message0": " wait %1 seconds",
@@ -18,7 +5,7 @@ Blockly.defineBlocksWithJsonArray([{
     "type": "field_number",
     "name": "SECONDS",
     "min": 0,
-    "max": 3600,
+    "max": 86400,
     "value": 1
   }],
   "previousStatement": null,
@@ -26,12 +13,7 @@ Blockly.defineBlocksWithJsonArray([{
   "colour": "%{BKY_LOOPS_HUE}"
 }]);
 
-/**
- * Generator for wait block creates call to new method
- * <code>waitForSeconds()</code>.
- */
 Blockly.JavaScript['wait_seconds'] = function(block) {
-  var seconds = Number(block.getFieldValue('SECONDS'));
-  var code = 'setTimeout(seconds * 1000);\n';
+  var code = 'setTimeout(SECONDS * 1000);\n';
   return code;
 }

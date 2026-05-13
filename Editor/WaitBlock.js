@@ -18,7 +18,7 @@ Blockly.defineBlocksWithJsonArray([{
     "type": "field_number",
     "name": "SECONDS",
     "min": 0,
-    "max": 600,
+    "max": 3600,
     "value": 1
   }],
   "previousStatement": null,
@@ -32,22 +32,8 @@ Blockly.defineBlocksWithJsonArray([{
  */
 Blockly.JavaScript['wait_seconds'] = function(block) {
   var seconds = Number(block.getFieldValue('SECONDS'));
-  var code = 'waitForSeconds(' + seconds + ');\n';
+  var code = 'setTimeout(seconds * 1000);\n';
   return code;
 };
-
-/**
- * Register the interpreter asynchronous function
- * <code>waitForSeconds()</code>.
- */
-function initInterpreterWaitForSeconds(interpreter, globalObject) {
-  // Ensure function name does not conflict with variable names.
-  Blockly.JavaScript.addReservedWords('waitForSeconds');
-
-  var wrapper = interpreter.createAsyncFunction(
-    function(timeInSeconds, callback) {
-      // Delay the call to the callback.
-      setTimeout(callback, timeInSeconds * 1000);
-    });
   interpreter.setProperty(globalObject, 'waitForSeconds', wrapper);
 }

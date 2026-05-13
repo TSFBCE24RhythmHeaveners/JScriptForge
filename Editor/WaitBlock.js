@@ -1,28 +1,19 @@
-const pausescript = {
-  "type": "pause",
-  "tooltip": "Pauses a script",
-  "helpUrl": "",
-  "message0": "pause %1",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "pauseseconds",
-      "align": "RIGHT",
-      "check": "Number"
-    }
-  ],
+Blockly.defineBlocksWithJsonArray([{
+  "type": "wait_seconds",
+  "message0": " wait %1 seconds",
+  "args0": [{
+    "type": "field_number",
+    "name": "SECONDS",
+    "min": 0,
+    "max": 86400,
+    "value": 1
+  }],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 60,
-  "inputsInline": true
-};
-Blockly.common.defineBlocksWithJsonArray([pausescript]); {
-  const pauseseconds = block.getFieldValue('pauseseconds');
-  const code = `setTimeout(pauseseconds * 1000);\n`;
-  return code;
-};
+  "colour": "%{BKY_LOOPS_HUE}"
+}]);
 
-//Add blocks
-Blockly.blocks.register([
-"pause"
-], "Pause Block", "yellow");
+Blockly.JavaScript['wait_seconds'] = function(block) {
+  var code = 'setTimeout(() => {console.log("hahaha");}, SECONDS * 1000);\n';
+  return code;
+}

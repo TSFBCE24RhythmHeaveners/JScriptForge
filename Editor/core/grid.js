@@ -69,7 +69,7 @@ Blockly.Grid = function(pattern, options) {
    * @type {boolean}
    * @private
    */
-  this.snapToGrid_ = true;
+  this.snapToGrid_ = snap;
 };
 
 /**

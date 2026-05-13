@@ -19,12 +19,12 @@ Blockly.defineBlocksWithJsonArray([
 }               
 ]);
 Blockly.JavaScript['pause'] = function(block) {
-  // TODO: Assemble JavaScript into code variable.
-  var code = 'setTimeout(${pauseseconds} * 1000);\n';
+  const pauseseconds = block.getFieldValue('pauseseconds');
+  const code = `setTimeout(${pauseseconds} * 1000);\n`;
   return code;
 };
 
 //Add blocks
 gvbvdxxScriptMaker.blocks.register([
 "pause"
-], "Wait Block", "gold");
+], "Pause Block", "gold");

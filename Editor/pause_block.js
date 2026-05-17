@@ -1,4 +1,4 @@
-Blockly.defineBlocksWithJsonArray([{
+Blockly.common.defineBlocksWithJsonArray([{
   "type": "pause",
   "message0": "pause %1 milliseconds",
   "args0": [{

@@ -35,7 +35,7 @@
     <button onclick="loadblockcode()" style="height: 30px; width: 80px; border:0;">Load code</button>
         </div>
         <div class="bottom">
-            <textarea type="text" style="height: 80px; width: 500px; border:0; resize: none;" id="p2" enabled="false" cols="infinity" rows="infinity" readonly>Output Of Your Code </textarea>
+            <textarea type="text" style="height: 60px; width: 500px; border:0; resize: none;" id="p2" enabled="false" cols="infinity" rows="infinity" readonly>Output Of Your Code </textarea>
         </div>
         <div class="column">
                     <textarea style="height: 480px; width: 500px; border:0; resize: none; " id="p1" enabled="false" cols="infinity" rows="infinity" textmode="multiline" readonly ></textarea>
@@ -320,6 +320,7 @@
             </shadow>
           </value>
         </block>
+		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
           <value name="TEXT">
             <shadow type="text">

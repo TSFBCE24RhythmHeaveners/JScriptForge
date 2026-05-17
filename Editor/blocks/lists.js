@@ -64,10 +64,10 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
     "tooltip": "%{BKY_LISTS_REPEAT_TOOLTIP}",
     "helpUrl": "%{BKY_LISTS_REPEAT_HELPURL}"
   },
-  // Block for reversing a list.
+  // Block for reversing a list. 
   {
     "type": "lists_reverse",
-    "message0": "%{BKY_LISTS_REVERSE_MESSAGE0}",
+    "message0": "%{BKY_LISTS_REVERSE_MESSAGE0} list",
     "args0": [
       {
         "type": "input_value",

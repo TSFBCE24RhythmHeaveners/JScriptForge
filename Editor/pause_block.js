@@ -1,4 +1,5 @@
-Blockly.common.defineBlocksWithJsonArray([{
+Blockly.common.defineBlocksWithJsonArray([
+{
   "type": "pause",
   "message0": "pause for %1 milliseconds",
   "args0": [{
@@ -13,7 +14,8 @@ Blockly.common.defineBlocksWithJsonArray([{
   "colour": "%{BKY_LOOPS_HUE}"
   "tooltip": "Pause for a specific amount of milliseconds",
   "helpUrl": ""
-}]);
+}
+]);
 Blockly.JavaScript['pause'] = function(block) {
   var code = 'setTimeout(' + pausetime + ');\n';
   return code;

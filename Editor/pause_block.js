@@ -1,37 +1,20 @@
-Blockly.defineBlocksWithJsonArray([
-{
-  "type": "pause_mseconds",
-  "message0": "pause for %1 milliseconds, then do %2 %3",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "time",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_statement",
-      "name": "afterpause"
-    }
-  ],
+Blockly.defineBlocksWithJsonArray([{
+  "type": "pause",
+  "message0": "pause for %1 milliseconds",
+  "args0": [{
+    "type": "field_number",
+    "name": "mseconds",
+    "min": 0,
+    "max": 86400,
+    "value": 1
+  }],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": %{BKY_LOOPS_HUE},
-  "tooltip": "Wait for (Number) milliseconds",
-  "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/"
-}
-]);
+  "colour": "%{BKY_LOOPS_HUE}"
+}]);
 
-Blockly.JavaScript['pause_mseconds'] = function(block) {
-  var pausing_time = Blockly.JavaScript.valueToCode(block, 'time', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_afterpause = Blockly.JavaScript.statementToCode(block, 'afterpause');
-  var code = 'setTimeout(() => {  ' + statements_afterpause + ' },(' + pausing_time + '));\n';
+Blockly.JavaScript['pause'] = function(block) {
+  var pausing_time = Blockly.JavaScript.valueToCode(block, 'mseconds', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'setTimeout(() => (' + pausing_time + '));\n';
   return code;
 };
-
-gvbvdxxScriptMaker.blocks.register([
-"pause_mseconds"
-], "Pause Block", "green");

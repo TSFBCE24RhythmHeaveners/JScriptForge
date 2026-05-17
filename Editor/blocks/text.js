@@ -565,7 +565,7 @@ Blockly.Blocks['text_reverse'] = {
    */
   init: function() {
     this.jsonInit({
-      "message0": reverse text %1,
+      "message0": Blockly.Msg['TEXT_REVERSE_MESSAGE0'],
       "args0": [
         {
           "type": "input_value",

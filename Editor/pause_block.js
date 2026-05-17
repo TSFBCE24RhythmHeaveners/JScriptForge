@@ -27,6 +27,7 @@ Blockly.JavaScript['pause'] = function(block) {
   var code = 'setTimeout(() => {  ' + statements_afterpausing + ' },(' + value_pausetime + '));\n';
   return code;
 };
+//Add blocks
 gvbvdxxScriptMaker.blocks.register([
 "pause"
 ], "Pause Block", "green");

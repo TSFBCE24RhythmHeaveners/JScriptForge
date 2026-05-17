@@ -32,4 +32,4 @@ Blockly.JavaScript['pause_mseconds'] = function(block) {
 }
 gvbvdxxScriptMaker.blocks.register([
 "pause_mseconds"
-], "Pause Block", "green");
+], "Based Off Of Scratch");

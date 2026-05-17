@@ -1,19 +1,23 @@
 Blockly.common.defineBlocksWithJsonArray([
 {
   "type": "pause",
-  "message0": "pause for %1 milliseconds",
-  "args0": [{
-    "type": "field_number",
-    "name": "pausetime",
-    "min": 0,
-    "max": 86400000,
-    "value": 1
-  }],
+  "message0": "pause for %1 milliseconds then do %2 ",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "time",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_statement",
+      "name": "afterwait"
+    }
+  ],
   "previousStatement": null,
-  "nextStatement": null,
-  "colour": "%{BKY_LOOPS_HUE}"
+  "colour": %{BKY_LOOPS_HUE},
   "tooltip": "Pause for a specific amount of milliseconds",
-  "helpUrl": ""
+  "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/"
 }
 ]);
 Blockly.JavaScript['pause'] = function(block) {

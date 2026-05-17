@@ -24,12 +24,14 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/"
 }
 ]);
+
 Blockly.JavaScript['pause_mseconds'] = function(block) {
   var pausing_time = Blockly.JavaScript.valueToCode(block, 'time', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_afterpause = Blockly.JavaScript.statementToCode(block, 'afterpause');
   var code = 'setTimeout(() => {  ' + statements_afterpause + ' },(' + pausing_time + '));\n';
   return code;
 }
+
 gvbvdxxScriptMaker.blocks.register([
 "pause_mseconds"
 ], "Pause Block", "green");

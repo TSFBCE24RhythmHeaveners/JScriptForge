@@ -292,6 +292,30 @@
             </shadow>
           </value>
         </block>
+		<block type="text_count">
+          <value name="SUB">
+            <shadow type="text"></shadow>
+          </value>
+          <value name="TEXT">
+            <shadow type="text"></shadow>
+          </value>
+        </block>
+        <block type="text_replace">
+          <value name="FROM">
+            <shadow type="text"></shadow>
+          </value>
+          <value name="TO">
+            <shadow type="text"></shadow>
+          </value>
+          <value name="TEXT">
+            <shadow type="text"></shadow>
+          </value>
+        </block>
+        <block type="text_reverse">
+          <value name="TEXT">
+            <shadow type="text"></shadow>
+          </value>
+        </block>
         <block type="text_print">
           <value name="TEXT">
             <shadow type="text">
@@ -357,6 +381,7 @@
           </value>
         </block>
         <block type="lists_sort"></block>
+		<block type="lists_reverse"></block>
       </category>
       <category name="Controls" colour="30">
         <block type="controls_repeat_ext"></block>
@@ -394,6 +419,9 @@
           <block type="text_isEmpty"></block>
           <block type="text_indexOf"></block>
           <block type="text_charAt"></block>
+		  <block type="text_count"></block>
+		  <block type="text_replace"></block>
+		  <block type="text_reverse"></block>
       </category>
       <category name="Variables" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
         <block type="variables_get"></block>
@@ -410,6 +438,7 @@
         <block type="lists_make"></block>
         <block type="lists_make_item"></block>
         <block type="list_text"></block>
+		<block type="lists_reverse"></block>
       </category>        
       <category name="Colours" colour="74">
           <block type="colour_picker"></block>
@@ -449,6 +478,8 @@
              <block type="play_pause_sound_component"></block>
              <block type="is_doing_this_sound_component"></block>
              <block type="set_setting_sound_component"></block>
+		 </category>
+		 <category name="Music" colour="0">
              <block type="playnotegmidi"></block>
 	         <block type="calculate_note_as_play_rate"></block>
          </category>

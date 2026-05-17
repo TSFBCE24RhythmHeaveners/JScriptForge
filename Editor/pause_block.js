@@ -12,8 +12,7 @@ Blockly.common.defineBlocksWithJsonArray([{
   "nextStatement": null,
   "colour": "%{BKY_LOOPS_HUE}"
 }]);
-
-Blockly.JavaScript['pause'] = function(block) {
-  var code = 'setTimeout(' + pausetime + ');\n';
+javascriptGenerator.forBlock['pause'] = function(block, generator) {
+  const code = 'setTimeout(' + pausetime + ');\n';
   return code;
-}
+};

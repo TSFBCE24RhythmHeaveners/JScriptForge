@@ -14,7 +14,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 
 Blockly.JavaScript['pause'] = function(block) {
-  var pausing_time = Blockly.JavaScript.valueToCode(block, 'mseconds', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'setTimeout(() => (' + pausing_time + '));\n';
+  var value_time = Blockly.JavaScript.valueToCode(block, 'mseconds', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'setTimeout(() => (' + value_time + '));\n';
   return code;
 };

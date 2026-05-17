@@ -16,7 +16,6 @@
 'use strict';
 
 goog.provide('Blockly.Constants.Lists');
-
 goog.require('Blockly');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.FieldDropdown');
@@ -67,7 +66,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
   // Block for reversing a list. 
   {
     "type": "lists_reverse",
-    "message0": "%{BKY_LISTS_REVERSE_MESSAGE0} list",
+    "message0": "%{BKY_LISTS_REVERSE_MESSAGE0}",
     "args0": [
       {
         "type": "input_value",

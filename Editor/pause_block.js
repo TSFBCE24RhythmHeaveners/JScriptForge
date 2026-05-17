@@ -24,5 +24,5 @@ Blockly.JavaScript['pause'] = function(block) {
   return setTimeout(' + pausetime + ');\n;
 };
 Blockly.blocks.register([
-"my_block"
-], "My Cool Blocks", "blue");
+"pause"
+], "Pause Block", "green");

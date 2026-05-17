@@ -17,6 +17,5 @@ Blockly.common.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['pause'] = function(block) {
-  var code = 'setTimeout(' + pausetime + ');\n';
-  return code;
+  return setTimeout(' + pausetime + ');\n;
 };

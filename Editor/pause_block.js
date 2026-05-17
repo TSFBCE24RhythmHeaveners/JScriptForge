@@ -23,6 +23,6 @@ Blockly.common.defineBlocksWithJsonArray([
 Blockly.JavaScript['pause'] = function(block) {
   return setTimeout(' + pausetime + ');\n;
 };
-Blockly.blocks.register([
+gvbvdxxScriptMaker.blocks.register([
 "pause"
 ], "Pause Block", "green");

@@ -31,3 +31,7 @@ Blockly.JavaScript['pause_mseconds'] = function(block) {
   var code = 'setTimeout(() => {  ' + statements_afterpause + ' },(' + pausing_time + '));\n';
   return code;
 };
+
+gvbvdxxScriptMaker.blocks.register([
+"pause_mseconds"
+], "Pause Block", "green");

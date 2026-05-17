@@ -12,7 +12,6 @@
 
 goog.provide('Blockly.Blocks.texts');  // Deprecated
 goog.provide('Blockly.Constants.Text');
-
 goog.require('Blockly');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.FieldDropdown');
@@ -564,10 +563,9 @@ Blockly.Blocks['text_reverse'] = {
    * Block for reversing a string.
    * @this {Blockly.Block}
    */
-  // Blockly.Msg['TEXT_REVERSE_MESSAGE0']
   init: function() {
     this.jsonInit({
-      "message0": reverse text,
+      "message0": Blockly.Msg['TEXT_REVERSE_MESSAGE0'],
       "args0": [
         {
           "type": "input_value",

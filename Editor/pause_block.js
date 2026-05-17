@@ -1,17 +1,17 @@
 Blockly.common.defineBlocksWithJsonArray([
 {
   "type": "pause",
-  "message0": "pause for %1 milliseconds then do %2 ",
+  "message0": "pause for %1 milliseconds then do %2",
   "args0": [
     {
       "type": "input_value",
-      "name": "time",
+      "name": "pausetime",
       "check": "Number",
       "align": "RIGHT"
     },
     {
       "type": "input_statement",
-      "name": "afterwait"
+      "name": "afterpausing"
     }
   ],
   "previousStatement": null,
@@ -21,9 +21,11 @@ Blockly.common.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['pause'] = function(block) {
-  var code = 'setTimeout(' + pausetime + ');\n'
+  var value_pausetime = Blockly.JavaScript.valueToCode(block, 'pausetime', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_afterpausing = Blockly.JavaScript.statementToCode(block, 'afterpausing');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'setTimeout(() => {  ' + statements_afterpausing + ' },(' + value_pausetime + '));\n';
   return code;
-};
 gvbvdxxScriptMaker.blocks.register([
 "pause"
 ], "Pause Block", "green");

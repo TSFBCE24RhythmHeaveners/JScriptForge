@@ -18,11 +18,11 @@
         <a href="../HTMLLearners.html">Set Up HTML</a>
         <a href="../Students.html">For Students</a> 
 	</div>
-    <h1 style="font-size: 50px; height: 100px; width: 700px; font-family:Arial; color: #ccb3ff; text-shadow: 2px 2px 2px #9966ff">JavaScriptForge</h1>
+    <p style="font-size: 50px; height: 100px; width: 700px; font-family:Arial; color: #ccb3ff; text-shadow: 2px 2px 2px #9966ff"><b>JavaScriptForge</b></p>
     <div name="app" style="background-color:#ffff;">
     <div class="row">
         <div class="column">
-    <div id="blocklyArea"  style="height: 720px; width:calc(100vw - 600px); border:0; position:relative;">
+    <div id="blocklyArea"  style="height: 640px; width:calc(100vw - 600px); border:0; position:relative;">
         <div id="blocklyDiv" style="position: absolute border:0;"></div>
     </div>
         </div>
@@ -94,7 +94,14 @@
         <block type="logic_ternary"></block>
       </category>
       <category name="Loops (Blockly)" colour="56">
-        <block type="controls_repeat_ext">
+        <block type="wait">
+		  <value name="time">
+            <shadow type="math_number">
+              <field name="NUM">1000</field>
+            </shadow>
+          </value>
+		</block>
+		<block type="controls_repeat_ext">
           <value name="TIMES">
             <shadow type="math_number">
               <field name="NUM">10</field>

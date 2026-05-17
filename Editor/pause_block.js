@@ -1,18 +1,18 @@
 Blockly.common.defineBlocksWithJsonArray([{
-  "type": "pause",
-  "message0": "pause %1 milliseconds",
+  "type": "wait_seconds",
+  "message0": " wait %1 seconds",
   "args0": [{
     "type": "field_number",
-    "name": "pausetime",
+    "name": "SECONDS",
     "min": 0,
-    "max": 86400000,
+    "max": 600,
     "value": 1
   }],
   "previousStatement": null,
   "nextStatement": null,
   "colour": "%{BKY_LOOPS_HUE}"
 }]);
-javascriptGenerator.forBlock['pause'] = function(block, generator) {
-  const code = 'setTimeout(' + pausetime + ');\n';
+Blockly.JavaScript['pause'] = function(block) {
+  var code = 'setTimeout(' + pausetime + ');\n';
   return code;
 };

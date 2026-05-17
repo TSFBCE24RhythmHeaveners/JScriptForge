@@ -1,4 +1,4 @@
-Blockly.common.defineBlocksWithJsonArray([
+Blockly.defineBlocksWithJsonArray([
 {
   "type": "pause",
   "message0": "pause for %1 milliseconds then do %2",
@@ -26,3 +26,4 @@ Blockly.JavaScript['pause'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 'setTimeout(() => {  ' + statements_afterpausing + ' },(' + value_pausetime + '));\n';
   return code;
+};

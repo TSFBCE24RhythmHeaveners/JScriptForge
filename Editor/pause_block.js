@@ -22,7 +22,7 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 120
 }
 ]);
-javascript.javascriptGenerator.forBlock['pause'] = function(block) {
+javascript.javascriptGenerator.forBlock['pause'] = function() {
   const value_milliseconds = block.getFieldValue('milliseconds');
   const statement_afterpause = generator.statementToCode(block, 'afterpause');
   const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '))';

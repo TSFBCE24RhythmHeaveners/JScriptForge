@@ -1,4 +1,4 @@
-Blockly.defineBlocksWithJsonArray([
+Blockly.common.defineBlocksWithJsonArray([
 {
   "type": "pause",
   "tooltip": "Pause for a specific amount of milliseconds",
@@ -22,9 +22,9 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 120
 }
 ]);
-javascript.javascriptGenerator.forBlock['pause'] = function() {
+javascript.javascriptGenerator.forBlock['pause'] = function(block) {
   const value_milliseconds = block.getFieldValue('milliseconds');
   const statement_afterpause = generator.statementToCode(block, 'afterpause');
-  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '))';
+  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '));\n';
   return code;
 }

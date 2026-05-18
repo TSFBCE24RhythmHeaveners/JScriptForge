@@ -1,5 +1,5 @@
 Blockly.defineBlocksWithJsonArray([
-{
+ {
   "type": "pause",
   "message0": "pause for %1 milliseconds then do %2 %3",
   "args0": [

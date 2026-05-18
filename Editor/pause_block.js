@@ -25,6 +25,6 @@ Blockly.defineBlocksWithJsonArray([
 javascript.javascriptGenerator.forBlock['pause'] = function(block) {
   const value_milliseconds = block.getFieldValue('milliseconds');
   const statement_afterpause = generator.statementToCode(block, 'afterpause');
-  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '));';
+  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '))';
   return code;
 }

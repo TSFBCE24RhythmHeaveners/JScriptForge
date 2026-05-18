@@ -6,7 +6,7 @@ Blockly.defineBlocksWithJsonArray([
   "message0": "pause for %1 milliseconds then %2",
   "args0": [
     {
-      "type": "field_number",
+      "type": "input_number",
       "name": "milliseconds",
       "value": 0,
       "min": 0,
@@ -24,6 +24,6 @@ Blockly.defineBlocksWithJsonArray([
 javascript.javascriptGenerator.forBlock['pause'] = function(block) {
   const number_milliseconds = block.getFieldValue('milliseconds');
   const statement_afterpause = generator.statementToCode(block, 'afterpause');
-  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '));\n';
+  const code = 'setTimeout(() => { ' + statements_afterpause + ' },(' + value_milliseconds + '))';
   return code;
 }

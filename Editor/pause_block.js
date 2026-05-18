@@ -9,9 +9,6 @@ Blockly.common.defineBlocksWithJsonArray([
       "type": "input_value",
       "name": "milliseconds",
       "check": "Number"
-      "value": 1000,
-      "min": 0,
-      "max": 86400000
     },
     {
       "type": "input_statement",

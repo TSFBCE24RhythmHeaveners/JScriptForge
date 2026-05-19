@@ -253,7 +253,7 @@
         <block type="text_indexOf">
           <value name="VALUE">
             <block type="variables_get">
-              <field name="VAR">{textVariable}</field>
+              <field name="VAR">text</field>
             </block>
           </value>
           <value name="FIND">
@@ -265,14 +265,14 @@
         <block type="text_charAt">
           <value name="VALUE">
             <block type="variables_get">
-              <field name="VAR">{textVariable}</field>
+              <field name="VAR">text</field>
             </block>
           </value>
         </block>
         <block type="text_getSubstring">
           <value name="STRING">
             <block type="variables_get">
-              <field name="VAR">{textVariable}</field>
+              <field name="VAR">text</field>
             </block>
           </value>
         </block>
@@ -347,28 +347,28 @@
         <block type="lists_indexOf">
           <value name="VALUE">
             <block type="variables_get">
-            <field name="VAR">{listVariable}</field>
+            <field name="VAR">list</field>
           </block>
         </value>
       </block>
       <block type="lists_getIndex">
         <value name="VALUE">
           <block type="variables_get">
-            <field name="VAR">{listVariable}</field>
+            <field name="VAR">list</field>
           </block>
         </value>
       </block>
       <block type="lists_setIndex">
         <value name="LIST">
           <block type="variables_get">
-            <field name="VAR">{listVariable}</field>
+            <field name="VAR">list</field>
           </block>
         </value>
       </block>
       <block type="lists_getSublist">
         <value name="LIST">
           <block type="variables_get">
-              <field name="VAR">{listVariable}</field>
+              <field name="VAR">list</field>
             </block>
           </value>
         </block>
@@ -520,8 +520,8 @@
 
       zoom:
          {controls: true,
-          wheel: false,
-          startScale: 0.8,
+          wheel: true,
+          startScale: 1.0,
           maxScale: 5,
           minScale: 0,
           scaleSpeed: 1.2,
@@ -537,7 +537,7 @@
           colour: '#ccc',
           snap: true},
      trashcan: false,
-	 renderer: 'zelos'}
+	 renderer: 'thrasos'}
                                 );
   var onresize = function(e) {
     // Compute the absolute coordinates and dimensions of blocklyArea.

@@ -1,19 +1,21 @@
 Blockly.common.defineBlocksWithJsonArray([
 {
   "type": "generalcblock",
-  "tooltip": "An example C-shaped block.",
-  "helpUrl": "",
-  "message0": "general c-block %1",
+  "message0": "general c-shaped block %1 %2",
   "args0": [
     {
+      "type": "input_dummy"
+    },
+    {
       "type": "input_statement",
-      "name": "insidegeneralcblock",
-      "align": "CENTRE"
+      "name": "insidegeneralcblock"
     }
   ],
   "previousStatement": null,
   "nextStatement": null,
   "colour": %{BKY_LOOPS_HUE},
+  "tooltip": "An example C-shaped block.",
+  "helpUrl": "",
   "inputsInline": false
 }
 ]);

@@ -19,9 +19,11 @@ Blockly.common.defineBlocksWithJsonArray([
 ]);
 Blockly.JavaScript['generalcblock'] = function(block) {
   var statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
+  // TODO: Assemble JavaScript into code variable.
   var code = '{ + statement_insidegeneralcblock + };\n';
   return code;
 };
+//Add blocks
 gvbvdxxScriptMaker.blocks.register([
 "generalcblock"
 ], "General Purpose C-Block", "green");

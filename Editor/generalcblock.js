@@ -17,10 +17,10 @@ Blockly.common.defineBlocksWithJsonArray([
   "inputsInline": false
 }
 ]);
-Blockly.JavaScript['generalcblock'] = function(block) {
-  var statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
+javascriptGenerator.forBlock['generalcblock'] = function(block) {
+  const statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
   // TODO: Assemble JavaScript into code variable.
-  var code = '{ + statement_insidegeneralcblock + };\n';
+  const code = '{ + statement_insidegeneralcblock + };\n';
   return code;
 };
 //Add blocks

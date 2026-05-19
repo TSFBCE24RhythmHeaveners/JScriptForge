@@ -3,7 +3,7 @@ Blockly.defineBlocksWithJsonArray([{
     "message0": "true",
     "output": null,
     "style": "logic_blocks",
-    "tooltip": "In binary, True returns a one.",
+    "tooltip": "Returns true.",
     "helpUrl": ""
 }]);
 Blockly.JavaScript['logic_true'] = function(block) {

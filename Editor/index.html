@@ -95,7 +95,7 @@
         <block type="logic_null"></block>
         <block type="logic_ternary"></block>
       </category>
-      <category name="Loops (Blockly)" colour="56">
+      <category name="Loops (Blockly)" colour="32">
         <block type="wait">
 		  <value name="time">
             <shadow type="math_number">
@@ -131,7 +131,7 @@
         <block type="controls_forEach"></block>
         <block type="controls_flow_statements"></block>
       </category>
-      <category name="Math (Blockly)" colour="126">
+      <category name="Math (Blockly)" colour="56">
         <block type="math_number">
           <field name="NUM">123</field>
         </block>
@@ -232,7 +232,7 @@
           </value>
         </block>
       </category>
-      <category name="Text (Blockly)" colour="170">
+      <category name="Text (Blockly)" colour="126">
         <block type="text"></block>
         <block type="text_join"></block>
 		<block type="scratch_join"><value name="TEXT1"><shadow type="text"><field name="TEXT">apple</field></shadow></value><value name="TEXT2"><shadow type="text"><field name="TEXT">banana</field></shadow></value></block>
@@ -325,7 +325,6 @@
           </value>
         </block>
 		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
-		<block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
           <value name="TEXT">
             <shadow type="text">
@@ -348,7 +347,7 @@
           </value>
         </block>
       </category>
-      <category name="Lists (Blockly)" colour="210">
+      <category name="Lists (Blockly)" colour="170">
         <block type="lists_create_with">
           <mutation items="0"></mutation>
         </block>
@@ -400,8 +399,13 @@
         <block type="lists_sort"></block>
 		<block type="lists_reverse"></block>
       </category>
-	  <category name="Variables (Blockly)" colour="270" custom="VARIABLE"></category>
-	  <category name="Custom (Blockly)" colour="320" custom="PROCEDURE"></category>
+	  <category name="Variables (Blockly)" colour="210" custom="VARIABLE"></category>
+	  <category name="Custom (Blockly)" colour="270" custom="PROCEDURE"></category>
+	  <category name="Colors (Blockly)" colour="320">
+          <block type="colour_picker"></block>
+          <block type="colour_random"></block>
+          <block type="colour_rgb"></block>
+          <block type="colour_blend"></block>
       <category name="Controls" colour="30">
         <block type="controls_repeat_ext"></block>
 		<block type="controls_if"></block>
@@ -489,11 +493,11 @@
          </category>
          <category name="Scratch Blocks" colour="320">
                           <block type="scratch_play_sound"></block>
+	     		          <block type="scratch_play_sound_until_done"></block>
                           <block type="scratch_join"></block>
                           <block type="or"></block>
          </category>
          <category name="Sounds" colour="300">
-             <heading text="hi"></heading>
              <block type="set_sound_component"><block type="text">Meow.wav</block></block>
              <block type="play_pause_sound_component"></block>
              <block type="is_doing_this_sound_component"></block>
@@ -503,6 +507,12 @@
              <block type="playnotegmidi"></block>
 	         <block type="calculate_note_as_play_rate"></block>
          </category>
+		 <category name="Sounds (Inputs)" colour="320">
+			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow</field></shadow></value></block>
+			 <block type="scratch_play_sound_until_done"><value name="sound"><shadow type="text"><field name="TEXT">Meow</field></shadow></value></block>
+			 <block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+			 <block type="playnotegmidi"><value name="playnote"><shadow type="number"><field name="NUM">60</field></shadow></value></block>
+		 </category>
          <category name="Addons" toolboxitemid="categoryAddon" colour="50" id="addons">
              <button text="Add an addon..." callbackkey="addAddon"></button>
          </category>

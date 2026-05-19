@@ -242,6 +242,7 @@
         <block type="text_length">
           <value name="VALUE">
             <shadow type="text">
+		  </value>
         </block>
 		  <block type="text_isEmpty">
           <value name="VALUE">
@@ -324,6 +325,13 @@
 		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
           <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="confirm">
+          <value name="confirmedText">
             <shadow type="text">
               <field name="TEXT">abc</field>
             </shadow>

@@ -7,6 +7,6 @@ Blockly.defineBlocksWithJsonArray([{
     "helpUrl": ""
 }]);
 Blockly.JavaScript['logic_true'] = function(block) {
-  In binary, True returns a one.
+  // In binary, True returns a one.
   return ['true', Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -23,7 +23,3 @@ Blockly.JavaScript['generalcblock'] = function(block) {
   var code = '{ + statement_insidegeneralcblock + };\n';
   return code;
 };
-//Add blocks
-gvbvdxxScriptMaker.blocks.register([
-"generalcblock"
-], "General Purpose C-Block", "green");

@@ -27,14 +27,21 @@ Blockly.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['my_block'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
   var code = 'window.alert("So Cool, I Know Right!");\n';
   return code;
 };
 Blockly.JavaScript['generalcblock'] = function(block) {
   var statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
+  // TODO: Assemble JavaScript into code variable.
   var code = '{ + statement_insidegeneralcblock + };\n';
   return code;
 };
+
+//Add blocks
 gvbvdxxScriptMaker.blocks.register([
-"my_block", "generalcblock"
+"generalcblock"
+], "General Purpose C-Block", "green");
+gvbvdxxScriptMaker.blocks.register([
+"my_block"
 ], "My Cool Blocks", "blue");

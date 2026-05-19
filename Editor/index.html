@@ -234,6 +234,7 @@
       <category name="Text (Blockly)" colour="210">
         <block type="text"></block>
         <block type="text_join"></block>
+		<block type="scratch_join"><value name="TEXT1"><shadow type="text"><field name="TEXT">apple</field></shadow></value><value name="TEXT2"><shadow type="text"><field name="TEXT">banana</field></shadow></value></block>
         <block type="text_append">
           <value name="TEXT">
             <shadow type="text"></shadow>
@@ -323,8 +324,16 @@
           </value>
         </block>
 		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+		<block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
           <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="ask">
+          <value name="asktext">
             <shadow type="text">
               <field name="TEXT">abc</field>
             </shadow>
@@ -337,7 +346,6 @@
             </shadow>
           </value>
         </block>
-		<block type="scratch_join"><value name="TEXT1"><shadow type="text"><field name="TEXT">apple</field></shadow></value><value name="TEXT2"><shadow type="text"><field name="TEXT">banana</field></shadow></value></block>
       </category>
       <category name="Lists (Blockly)" colour="320">
         <block type="lists_create_with">
@@ -388,6 +396,8 @@
             </shadow>
           </value>
         </block>
+		<category name="Variables (Blockly)" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
+		<category name="Procedures (Blockly)" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>
         <block type="lists_sort"></block>
 		<block type="lists_reverse"></block>
       </category>
@@ -460,7 +470,7 @@
         <category name="Debugging" colour="70">
 		<block type="log"></block>
 	</category>
-         <category name="GVBVDXX's Blocks" colour="320">
+         <category name="Gvbvdxx's Blocks" colour="320">
                            <block type="openlink"></block>
                             <block type="speak"></block>
                              <block type="savefile"></block>

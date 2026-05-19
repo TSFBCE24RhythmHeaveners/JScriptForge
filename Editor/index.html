@@ -520,20 +520,24 @@
 
       zoom:
          {controls: true,
-          wheel: true,
+          wheel: false,
           startScale: 1.0,
           maxScale: 5,
           minScale: 0,
           scaleSpeed: 1.2,
           pinch: true},
-                                  
+      move: {
+          scrollbars: true,
+          drag: true,
+          wheel: true,
+        }                  
          grid:
          {spacing: 20,
           length: 3,
           colour: '#ccc',
           snap: true},
      trashcan: false,
-	 renderer: 'zelos'}
+	 renderer: 'thrasos'}
                                 );
   var onresize = function(e) {
     // Compute the absolute coordinates and dimensions of blocklyArea.

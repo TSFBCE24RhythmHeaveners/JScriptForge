@@ -24,7 +24,8 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": %{BKY_LOOPS_HUE},
   "inputsInline": false
-};
+}
+]);
 Blockly.JavaScript['my_block'] = function(block) {
   var code = 'window.alert("So Cool, I Know Right!");\n';
   return code;

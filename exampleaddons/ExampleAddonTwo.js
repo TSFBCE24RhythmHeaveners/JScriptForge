@@ -1,26 +1,28 @@
 Blockly.common.defineBlocksWithJsonArray([
 {
   "type": "generalcblock",
-  "tooltip": "An example C-shaped block.",
-  "helpUrl": "",
-  "message0": "general c-block %1",
+  "message0": "general c-shaped block %1 %2",
   "args0": [
     {
+      "type": "input_dummy"
+    },
+    {
       "type": "input_statement",
-      "name": "insidegeneralcblock",
-      "align": "CENTRE"
+      "name": "insidegeneralcblock"
     }
   ],
   "previousStatement": null,
   "nextStatement": null,
   "colour": %{BKY_LOOPS_HUE},
+  "tooltip": "An example C-shaped block.",
+  "helpUrl": "",
   "inputsInline": false
 }
 ]);
-Blockly.JavaScript['generalcblock'] = function(block) {
-  var statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
+javascriptGenerator.forBlock['generalcblock'] = function(block) {
+  const statement_insidegeneralcblock = generator.statementToCode(block, 'insidegeneralcblock');
   // TODO: Assemble JavaScript into code variable.
-  var code = '{ + statement_insidegeneralcblock + };\n';
+  const code = '{ + statement_insidegeneralcblock + };\n';
   return code;
 };
 //Add blocks
